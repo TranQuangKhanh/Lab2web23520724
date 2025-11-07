@@ -3,5 +3,9 @@ services:
     name: jsx-without-react
     env: node
     branch: main
-    buildCommand: "npm ci && npm run build"
+    # Ensure devDependencies (typescript, vite) are installed on Render during build.
+    # Render sometimes sets the environment so devDependencies are omitted; using
+    # an explicit installCommand or `--include=dev` fixes `tsc` / `vite` not found errors.
+    installCommand: "npm ci --include=dev"
+    buildCommand: "npm run build"
     publishPath: "dist"
