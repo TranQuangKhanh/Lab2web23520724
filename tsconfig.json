@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-  "module": "ESNext",
-  "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "jsx": "react",
     "jsxFactory": "createElement",
     "jsxFragmentFactory": "createFragment",
@@ -12,7 +12,8 @@
     "esModuleInterop": true,
     "types": ["node"],
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
