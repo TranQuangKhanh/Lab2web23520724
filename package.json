@@ -7,7 +7,7 @@
     "type-check": "tsc --noEmit",
     "perf": "tsx src/tools/perf-tests.ts",
     "analyze": "npm run build && tsx src/tools/analyze-bundle.ts",
-    "start": "vite preview --port $PORT"
+    "start": "vite preview --port $PORT --host 0.0.0.0"
   },
   "engines": {
     "node": ">=18"
@@ -19,5 +19,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^7.1.10"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
