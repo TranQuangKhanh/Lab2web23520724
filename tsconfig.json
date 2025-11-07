@@ -2,16 +2,16 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "jsxFactory": "createElement",
-    "jsxFragmentFactory": "createFragment",
+    "moduleResolution": "node16",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM"],
     "allowJs": true,
     "strict": true,
     "esModuleInterop": true,
     "types": ["node"],
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
