@@ -7,6 +7,6 @@ services:
     installCommand: "npm ci --include=dev"
     buildCommand: "npm run build"
     # Start command for Render to run - server.js will bind to $PORT
-    startCommand: "node server.js"
+  startCommand: "node server.cjs"
     # The repo builds into `dist` which our server serves
     publishPath: "dist"
