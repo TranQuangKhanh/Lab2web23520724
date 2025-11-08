@@ -1,6 +1,9 @@
 services:
-  - type: static-site
+  - type: web
     name: jsx-without-react
     env: node
-  buildCommand: npm install && npx tsc --noEmit && node ./node_modules/vite/bin/vite.js build
-    publishPath: dist
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
