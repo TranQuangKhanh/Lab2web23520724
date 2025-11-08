@@ -2,5 +2,5 @@ services:
   - type: static-site
     name: jsx-without-react
     env: node
-    buildCommand: npm install && npx tsc --noEmit && npx vite build
+  buildCommand: npm install && npx tsc --noEmit && node ./node_modules/vite/bin/vite.js build
     publishPath: dist
