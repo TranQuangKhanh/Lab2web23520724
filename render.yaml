@@ -2,8 +2,5 @@ services:
   - type: static-site
     name: jsx-without-react
     env: node
-    branch: main
-    # Ensure devDependencies (typescript, vite) are installed during build
-    installCommand: "npm ci --include=dev"
-    buildCommand: "npm run build"
-    publishPath: "dist"
+    buildCommand: npm install && npx tsc --noEmit && npx vite build
+    publishPath: dist

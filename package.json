@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "compile": "tsc --noEmit",
+    "build": "npm run compile && vite build",
     "type-check": "tsc --noEmit",
     "perf": "tsx src/tools/perf-tests.ts",
     "analyze": "npm run build && tsx src/tools/analyze-bundle.ts",
